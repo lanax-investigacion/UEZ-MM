@@ -1,10 +1,14 @@
+#Importaciones
 import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
 
-st.write("Hello ,let's learn how to build a streamlit app together")
-st.title ("this is the app title")
-st.header("this is the markdown")
-st.markdown("this is the header")
-st.subheader("this is the subheader")
-st.caption("this is the caption")
-st.code("x=2021")
-st.latex(r''' a+a r^1+a r^2+a r^3 ''')
+#Texto
+st.title ("Unidades Economicas de la Zona Metropolitana de Monterrey [Noviembre/2022]")
+st.markdown("El objetivo es analizar las UE de la ZMM en un mapa")
+
+#Histograma
+rand=np.random.normal(1, 2, size=20)
+fig, ax = plt.subplots()
+ax.hist(rand, bins=15)
+st.pyplot(fig)
