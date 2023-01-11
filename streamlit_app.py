@@ -23,11 +23,17 @@ st.pydeck_chart(pdk.Deck(
     ),
     layers=[
         pdk.Layer(
+           'HexagonLayer',
+           data=dm,
+           get_position='[lon, lat]',
+           radius=10,
+        ),
+        pdk.Layer(
             'ScatterplotLayer',
             data=dm,
             get_position='[lon, lat]',
             get_color='[200, 30, 0, 160]',
-            get_radius=2,
+            get_radius=10,
         ),
     ],
 ))
