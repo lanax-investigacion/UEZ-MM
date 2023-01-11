@@ -8,8 +8,6 @@ st.title ("Unidades Economicas de la Zona Metropolitana de Monterrey [Noviembre/
 st.markdown("El objetivo es analizar las UE de la ZMM en un mapa")
 
 #Grafica
-import pandas as pd
-import numpy as np
 df= pd.DataFrame(
     np.random.randn(10, 2),
     columns=['x', 'y'])
