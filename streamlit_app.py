@@ -1,12 +1,11 @@
-#Importaciones
 import streamlit as st
 import pandas as pd
-import numpy as np
 
-#Texto
-st.title ("Unidades Economicas de la Zona Metropolitana de Monterrey [Noviembre/2022]")
-st.markdown("El objetivo es analizar las UE de la ZMM en un mapa")
+# Allow the user to upload the file
+file = st.file_uploader("UE_ZMM_LAT_LON_11_2022.csv", type="csv")
 
-#Mapa
-df = pd.DataFrame(np.random.randn(10, 2) / [10, 10] + [25.72939591, -100.3622204],columns=['lat', 'lon'])
-st.map(df)
+#Read the CSV
+data = pd.read_csv(file)
+
+#Display the dataframe
+st.dataframe(data)
