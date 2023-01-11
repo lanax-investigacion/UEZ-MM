@@ -14,26 +14,23 @@ dm = pd.read_csv("UE_ZMM_LAT_LON_2022_v2.csv")
 
 
 st.pydeck_chart(pdk.Deck(
-    map_style=None,
+    map_style='satelite',
     initial_view_state=pdk.ViewState(
         latitude=25.7293,
         longitude=-100.3622,
         zoom=10,
-        pitch=90,
+        pitch=0,
     ),
     layers=[
         pdk.Layer(
            'HexagonLayer',
            data=dm,
            get_position='[lon, lat]',
-           radius=10,
-        ),
-        pdk.Layer(
-            'ScatterplotLayer',
-            data=dm,
-            get_position='[lon, lat]',
-            get_color='[200, 30, 0, 160]',
-            get_radius=10,
+           radius=50,
+           elevation_scale=5,
+           elevation_range=[0, 1000],
+           pickable=True,
+           extruded=True,
         ),
     ],
 ))
