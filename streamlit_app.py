@@ -10,6 +10,6 @@ st.markdown("El objetivo es analizar las UE de la ZMM en un mapa")
 data = pd.read_csv("UE_ZMM_LAT_LON_11_2022.csv")
 #df = pd.DataFrame({'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9]})
 
-analisis = st.write(data['latitud','longitud'])
+analisis = st.write(data['latitud'],data['longitud'])
 st.dataframe(analisis)
 
