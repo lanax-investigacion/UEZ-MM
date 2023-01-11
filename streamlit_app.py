@@ -7,8 +7,6 @@ st.title ("Unidades Economicas de la Zona Metropolitana de Monterrey [Noviembre/
 st.markdown("El objetivo es analizar las UE de la ZMM en un mapa")
 
 #Read the CSV
-data = pd.read_csv("UE_ZMM_LAT_LON_11_2022.csv")
+data = pd.read_csv("UE_ZMM_LAT_LON_11_2022_v1.csv")
 
-st.write(data)
-st.dataframe(data)
 st.map(data)
