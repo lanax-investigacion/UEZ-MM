@@ -8,4 +8,5 @@ st.markdown("El objetivo es analizar las UE de la ZMM en un mapa")
 
 #Read the CSV
 data = pd.read_csv("UE_ZMM_LAT_LON_11_2022.csv")
+st.view(data)
 
