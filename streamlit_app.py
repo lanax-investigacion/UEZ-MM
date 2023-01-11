@@ -14,7 +14,7 @@ dm = pd.read_csv("UE_ZMM_LAT_LON_2022_v2.csv")
 
 
 st.pydeck_chart(pdk.Deck(
-    map_style='satelite',
+    map_style=None,
     initial_view_state=pdk.ViewState(
         latitude=25.7293,
         longitude=-100.3622,
